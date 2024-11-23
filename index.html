@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Informe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="ALAB">
+        </div>
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Noticias</a></li>
+            <li><a href="#">Artículos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <h1>VALIDAR INFORME</h1>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="content">
+        <div class="form-container">
+            <h2>Ingrese los datos del informe</h2>
+            <form id="consulta-form">
+                <label for="numero-informe">Número de Informe:</label>
+                <input type="text" id="numero-informe" placeholder="Ej: IE" required>
+                <label for="seccion-informe">Sección:</label>
+                <input type="text" id="seccion-informe" placeholder="Ej: 24" required>
+                <label for="id-informe">ID del Informe:</label>
+                <input type="text" id="id-informe" placeholder="Ej: 4999" required>
+                <button type="submit" id="consultar">Consultar</button>
+            </form>
+        </div>
+        <div id="resultado" class="resultado-container">
+            <!-- Aquí se mostrará contenido dinámico -->
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Ubicaciones</h3>
+                <p>Sede principal: Arequipa, Perú</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p>Email: ventas@alab.com.pe</p>
+                <p>Teléfono: (+51) 979 999 999</p>
+            </div>
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <p>&copy; 2024 ALAB. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
