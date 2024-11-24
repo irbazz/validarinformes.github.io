@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validar Informe</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
+</head>
+
 <body>
+    <!-- Barra Superior -->
+    <div class="navbar-top">
+        <div class="container">
+            <span>ventas@alab.com.pe</span>
+            <span class="contact-info">(+511) 713 0756 | Canal Denuncias | Alab Visor | Autenticación | Bolsa
+                Laboral</span>
+        </div>
+    </div>
     <!-- Barra de Navegación -->
     <nav class="navbar">
-        <div class="logo">
-            <img src="logo.png" alt="ALAB">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="ALAB">
+            </div>
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">¿Quiénes Somos?</a></li>
+                <li><a href="#">Medio Ambiente</a></li>
+                <li><a href="#">Laboratorio Calibración</a></li>
+                <li><a href="#">Agronomía</a></li>
+                <li><a href="#">Seguridad Alimentaria</a></li>
+                <li><a href="#">Salud Ocupacional</a></li>
+                <li><a href="#">Geoquímica Ambiental</a></li>
+            </ul>
         </div>
-        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Noticias</a></li>
-            <li><a href="#">Artículos</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
     </nav>
 
     <!-- Encabezado -->
@@ -28,44 +46,83 @@
 
     <!-- Contenido Principal -->
     <main class="content">
-        <div class="form-container">
+        <div class="form-container unified-container">
             <h2>Ingrese los datos del informe</h2>
             <form id="consulta-form">
                 <label for="numero-informe">Número de Informe:</label>
-                <input type="text" id="numero-informe" placeholder="Ej: IE" required>
+                <input type="text" id="numero-informe" placeholder="Ej: IE" style="text-transform: uppercase;" required>
                 <label for="seccion-informe">Sección:</label>
                 <input type="text" id="seccion-informe" placeholder="Ej: 24" required>
                 <label for="id-informe">ID del Informe:</label>
-                <input type="text" id="id-informe" placeholder="Ej: 4999" required>
+                <input type="text" id="id-informe" placeholder="Ej: 12345" required>
                 <button type="submit" id="consultar">Consultar</button>
             </form>
-        </div>
-        <div id="resultado" class="resultado-container">
-            <!-- Aquí se mostrará contenido dinámico -->
+            <div id="resultado" class="resultado-container initial-message">
+                <p><strong>Solo se podrán visualizar los informes emitidos en el año 2023, si desea consultar de años anteriores por favor comunicarse con nosotros:</strong></p>
+                <ul>
+                    <p><i class="fas fa-envelope"></i> mvalencia@alab.com.pe - Gerente General</p>
+                    <p><i class="fas fa-envelope"></i> comercial.coordinacion@alab.com.pe - Comercial Medio Ambiente</p>
+                    <p><i class="fas fa-envelope"></i> soporte@alab.com.pe - Jefe de Gestión de Calidad</p>
+                </ul>
+                <p><strong>Los informes de ensayo que se han emitido el día de hoy, se podrán visualizar dentro de las 24 horas (días hábiles).</strong></p>
+            </div>
         </div>
     </main>
 
     <!-- Pie de Página -->
     <footer>
         <div class="footer-container">
-            <div class="footer-column">
-                <h3>Ubicaciones</h3>
-                <p>Sede principal: Arequipa, Perú</p>
+            <!-- Logo y descripción -->
+            <div class="footer-column footer-logo">
+                <img src="logo2.png" alt="ALAB Logo">
+                <p>Acreditación ISO/IEC 17025:2017</p>
+                <ul id="lista001">
+                    <li>Laboratorio Calibración</li>
+                    <li>Agronomìa</li>
+                    <li>Seguridad Alimentaria</li>
+                    <li>Salud Ocupacional</li>
+                    <li>Geoquímica Ambiental</li>
+                </ul>
+
             </div>
+
+            <!-- Ubicaciones -->
             <div class="footer-column">
-                <h3>Contacto</h3>
-                <p>Email: ventas@alab.com.pe</p>
-                <p>Teléfono: (+51) 979 999 999</p>
+                <h3><i class="fas fa-map-marker-alt"></i> Sedes</h3>
+                <p><i class="fas fa-home"></i> Av. Guardia Chalaca Nº 1877, Bellavista, Callao</p>
+                <p><i class="fas fa-home"></i> Mz E Lt 9 COOP SIDSUR, Arequipa.</p>
+                <p><i class="fas fa-home"></i> Calle Los Ébanos Mz G Lt 17 Urb. Miraflores II Etapa Sede Piura</p>
+                <p><i class="fas fa-home"></i> Urb. Sol de Trujillo Mz A Lt 29 Alto Salaverry Sede Trujillo (En construcción)</p>
             </div>
+
+            <!-- Contactos -->
             <div class="footer-column">
+                <h3><i class="fas fa-phone-alt"></i> Contactos</h3>
+                <p><i class="fas fa-phone"></i> (+511) 713 0791 / 977 516 675 / Bellavista, Callao</p>
+                <p><i class="fas fa-envelope"></i> ventas@alab.com.pe</p>
+                <p><i class="fas fa-phone"></i> (+054) 616 843 / 932 646 642 / Arequipa</p>
+                <p><i class="fas fa-envelope"></i> comercial.arequipa@alab.com.pe</p>
+                <p><i class="fas fa-phone"></i> (+073) 542 3353 / 919 475 133 / Piura</p>
+                <p><i class="fas fa-envelope"></i> comercial.piura@alab.com.pe</p>
+                <p><i class="fas fa-phone"></i> 961 768 828 / 977 516 675 / Trujillo</p>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="footer-column footer-social">
                 <h3>Síguenos</h3>
-                <a href="#">Facebook</a>
-                <a href="#">LinkedIn</a>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
-        <p>&copy; 2024 ALAB. Todos los derechos reservados.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Analytical Laboratory - Reservados todos los derechos.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
