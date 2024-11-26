@@ -8,7 +8,7 @@ document.getElementById('consulta-form').addEventListener('submit', async (e) =>
 
     // Simulación de datos existentes con múltiples imágenes
     const documentos = [
-        { numero: 'IE', seccion: '24', id: '32898', imagenes: ['imagen01.jpg', 'imagen02.jpg', 'imagen03.jpg'] },
+        { numero: 'IE', seccion: '24', id: '32898', imagenes: ['imagen01.jpg', 'imagen02.jpg', 'imagen03.jpg','imagen04.jpg'] },
         { numero: 'IE', seccion: '25', id: '12345', imagenes: ['imagen04.jpg'] },
     ];
 
